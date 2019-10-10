@@ -8,7 +8,9 @@ import {
     selectCartItems,
     selectCartTotal
 } from "../../redux/cart/cart.selectors";
+
 import CheckoutItem from "../../components/checkout-item/checkout-item.component";
+import PaymentButton from "../../components/payment-button/payment-button.component";
 
 const CheckoutPage = ({ cartItems, total }) => (
     <div className="checkout-page">
@@ -34,6 +36,9 @@ const CheckoutPage = ({ cartItems, total }) => (
         ))}
         <div className="total">
             <span>TOTAL: ${total}</span>
+        </div>
+        <div>
+            <PaymentButton />
         </div>
     </div>
 );
